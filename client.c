@@ -8,6 +8,8 @@
 #include <unistd.h>
 #include <errno.h>
 #include <arpa/inet.h>
+#include<signal.h>
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-noreturn"
