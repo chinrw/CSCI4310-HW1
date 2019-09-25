@@ -74,8 +74,12 @@ int main(int argc, char *argv[]) {
             buf[len] = 0;
             printf("%s\n", buf);
             fprintf(fp, buf, len);
+        } else {
+            printf("INFO: connection closed");
+            break;
         }
     }
+    return 0;
 }
 
 #pragma clang diagnostic pop
