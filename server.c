@@ -15,10 +15,12 @@
 #define false 0
 
 int tcp_socket;
+int conn_fd;
 
 void Stop(int signal_no) {
     printf("Oops! stop!!! %d\n", signal_no);
     close(tcp_socket);
+    close(conn_fd);
     _exit(0);
 }
 
@@ -30,7 +32,6 @@ void sendMsg(int fd, const char *str) {
 
 
 int main(int argc, char **argv) {
-    int conn_fd;
     pid_t child_pid;
     socklen_t addr_len;
     int port;
@@ -95,7 +96,6 @@ int main(int argc, char **argv) {
                 sendMsg(conn_fd, buf);
                 sleep(2);
             }
-            close(tcp_socket);
             exit(0);
         } else if (child_pid < 0)
             fprintf(stderr, "ERROR: fork error: %s\n", strerror(errno));
