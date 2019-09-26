@@ -79,6 +79,8 @@ int main(int argc, char *argv[]) {
             break;
         }
     }
+    close(client_sock_fd);
+    fclose(fp);
     return 0;
 }
 

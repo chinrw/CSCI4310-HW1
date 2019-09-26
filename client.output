@@ -1,0 +1,91 @@
+SYS_brk(0)                                   = 0x55cbcf7f3000
+SYS_access("/etc/ld.so.nohwcap", 00)         = -2
+SYS_access("/etc/ld.so.preload", 04)         = -2
+SYS_openat(0xffffff9c, 0x7f5276b30428, 0x80000, 0) = 3
+SYS_fstat(3, 0x7fff39bfb350)                 = 0
+SYS_mmap(0, 0x137fa, 1, 2)                   = 0x7f5276d22000
+SYS_close(3)                                 = 0
+SYS_access("/etc/ld.so.nohwcap", 00)         = -2
+SYS_openat(0xffffff9c, 0x7f5276d38dd0, 0x80000, 0) = 3
+SYS_read(3, "\177ELF\002\001\001\003", 832)  = 832
+SYS_fstat(3, 0x7fff39bfb3b0)                 = 0
+SYS_mmap(0, 8192, 3, 34)                     = 0x7f5276d20000
+SYS_mmap(0, 0x3f0ae0, 5, 2050)               = 0x7f527671e000
+SYS_mprotect(0x7f5276905000, 2097152, 0)     = 0
+SYS_mmap(0x7f5276b05000, 0x6000, 3, 2066)    = 0x7f5276b05000
+SYS_mmap(0x7f5276b0b000, 0x3ae0, 3, 50)      = 0x7f5276b0b000
+SYS_close(3)                                 = 0
+SYS_arch_prctl(4098, 0x7f5276d214c0, 0x7f5276d21e10, 0x7f5276d20998) = 0
+SYS_mprotect(0x7f5276b05000, 16384, 1)       = 0
+SYS_mprotect(0x55cbce94d000, 4096, 1)        = 0
+SYS_mprotect(0x7f5276d36000, 4096, 1)        = 0
+SYS_munmap(0x7f5276d22000, 79866)            = 0
+signal(SIGINT, 0x55cbce74cc4a <unfinished ...>
+SYS_rt_sigaction(2, 0x7fff39bfb650, 0x7fff39bfb6f0, 8) = 0
+<... signal resumed> )                       = 0
+atoi(0x7fff39bfd8bd, 0x7fff39bfb650, 0, 0)   = 2346
+fopen("output", "w+" <unfinished ...>
+SYS_brk(0)                                   = 0x55cbcf7f3000
+SYS_brk(0x55cbcf814000)                      = 0x55cbcf814000
+SYS_openat(0xffffff9c, 0x7fff39bfd8c2, 578, 438) = 3
+<... fopen resumed> )                        = 0x55cbcf7f3260
+memset(0x7fff39bfb910, '\0', 16)             = 0x7fff39bfb910
+inet_addr("127.0.0.1")                       = 0x100007f
+htons(2346, 0, 0x100007f, 0)                 = 0x2a09
+socket(2, 1, 0 <unfinished ...>
+SYS_socket(2, 1, 0, 0x7f52768bccc0)          = 4
+<... socket resumed> )                       = 4
+connect(4, 0x7fff39bfb910, 16, 0x7fff39bfb910 <unfinished ...>
+SYS_connect(4, 0x7fff39bfb910, 16, 0x7f52768bccc0) = 0
+<... connect resumed> )                      = 0
+read(4 <unfinished ...>
+SYS_read(4, "[2346] PID 44099 Iteration #0\n", 1023) = 30
+<... read resumed> , "[2346] PID 44099 Iteration #0\n", 1023) = 30
+puts("[2346] PID 44099 Iteration #0\n" <unfinished ...>
+SYS_fstat(1, 0x7fff39bfb770)                 = 0
+SYS_write(1, "[2346] PID 44099 Iteration #0\n", 30) = 30
+SYS_write(1, "\n", 1)                        = 1
+<... puts resumed> )                         = 31
+fprintf(0x55cbcf7f3260, "[2346] PID 44099 Iteration #0\n" <unfinished ...>
+SYS_fstat(3, 0x7fff39bfb140)                 = 0
+<... fprintf resumed> )                      = 30
+read(4 <unfinished ...>
+SYS_read(4, "[2346] PID 44099 Iteration #1\n", 1023) = 30
+<... read resumed> , "[2346] PID 44099 Iteration #1\n", 1023) = 30
+puts("[2346] PID 44099 Iteration #1\n" <unfinished ...>
+SYS_write(1, "[2346] PID 44099 Iteration #1\n", 30) = 30
+SYS_write(1, "\n", 1)                        = 1
+<... puts resumed> )                         = 31
+fprintf(0x55cbcf7f3260, "[2346] PID 44099 Iteration #1\n") = 30
+read(4 <unfinished ...>
+SYS_read(4, "[2346] PID 44099 Iteration #2\n", 1023) = 30
+<... read resumed> , "[2346] PID 44099 Iteration #2\n", 1023) = 30
+puts("[2346] PID 44099 Iteration #2\n" <unfinished ...>
+SYS_write(1, "[2346] PID 44099 Iteration #2\n", 30) = 30
+SYS_write(1, "\n", 1)                        = 1
+<... puts resumed> )                         = 31
+fprintf(0x55cbcf7f3260, "[2346] PID 44099 Iteration #2\n") = 30
+read(4 <unfinished ...>
+SYS_read(4, "[2346] PID 44099 Iteration #3\n", 1023) = 30
+<... read resumed> , "[2346] PID 44099 Iteration #3\n", 1023) = 30
+puts("[2346] PID 44099 Iteration #3\n" <unfinished ...>
+SYS_write(1, "[2346] PID 44099 Iteration #3\n", 30) = 30
+SYS_write(1, "\n", 1)                        = 1
+<... puts resumed> )                         = 31
+fprintf(0x55cbcf7f3260, "[2346] PID 44099 Iteration #3\n") = 30
+read(4 <unfinished ...>
+SYS_read(4, "[2346] PID 44099 Iteration #4\n", 1023) = 30
+<... read resumed> , "[2346] PID 44099 Iteration #4\n", 1023) = 30
+puts("[2346] PID 44099 Iteration #4\n" <unfinished ...>
+SYS_write(1, "[2346] PID 44099 Iteration #4\n", 30) = 30
+SYS_write(1, "\n", 1)                        = 1
+<... puts resumed> )                         = 31
+fprintf(0x55cbcf7f3260, "[2346] PID 44099 Iteration #4\n") = 30
+read(4 <unfinished ...>
+SYS_read(4, "", 1023)                        = 0
+<... read resumed> , "", 1023)               = 0
+printf("INFO: connection closed")            = 23
+SYS_write(3, "[2346] PID 44099 Iteration #0\n[2"..., 150) = 150
+SYS_write(1, "INFO: connection closed", 23)  = 23
+SYS_exit_group(0 <no return ...>
++++ exited (status 0) +++
