@@ -86,7 +86,6 @@ int main(int argc, char **argv) {
         }
 
         if ((child_pid = fork()) == 0) {
-            close(tcp_socket);
             printf("Client from %s\n", inet_ntoa(tcp_client.sin_addr));
             fflush(stdout);
             for (int i = 0; i < 5; ++i) {
@@ -96,6 +95,7 @@ int main(int argc, char **argv) {
                 sendMsg(conn_fd, buf);
                 sleep(2);
             }
+            close(tcp_socket);
             exit(0);
         } else if (child_pid < 0)
             fprintf(stderr, "ERROR: fork error: %s\n", strerror(errno));
